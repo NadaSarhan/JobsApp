@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JobsApp</string>
+    <string name="welcome_msg">Welcome to Mega Trust Jobs</string>
+    <string name="btn_start">START</string>
+    <string name="company_name">company name</string>
+    <string name="company_logo">company logo</string>
+    <string name="job_title">job title</string>
+</resources>
