@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nada.jobsapp.data.api.JobHelperImpl
+import com.nada.jobsapp.data.api.JobsServices
 import com.nada.jobsapp.data.api.RetrofitBuilder
 import com.nada.jobsapp.data.model.Job
 import com.nada.jobsapp.ui.main.adapter.MainAdapter
@@ -66,7 +67,7 @@ class HomeActivity : AppCompatActivity() {
             this,
             ViewModelFactory(
                 JobHelperImpl(
-                    RetrofitBuilder.apiService
+                    RetrofitBuilder().getRetrofit().create(JobsServices::class.java)
                 )
             )
         ).get(MainViewModel::class.java)

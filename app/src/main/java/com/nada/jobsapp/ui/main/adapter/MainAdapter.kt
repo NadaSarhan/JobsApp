@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.nada.jobsapp.R
 import com.nada.jobsapp.data.model.Job
 import kotlinx.android.synthetic.main.job_items.view.*
@@ -16,9 +17,9 @@ class MainAdapter(
         fun bind(user: Job) {
             itemView.textViewCompanyName.text = user.company
             itemView.TextViewJobTitle.text = user.title
-//            Glide.with(itemView.imageViewAvatar.context)
-//                .load(user.avatar)
-//                .into(itemView.imageViewAvatar)
+            Glide.with(itemView.companyLogo.context)
+                .load(user.companyLogo)
+                .into(itemView.companyLogo)
         }
     }
 
