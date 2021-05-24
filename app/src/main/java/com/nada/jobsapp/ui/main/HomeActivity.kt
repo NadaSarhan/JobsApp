@@ -80,21 +80,15 @@ class HomeActivity : AppCompatActivity() {
                     is MainState.Idle -> {
 
                     }
-//                    is MainState.Loading -> {
-//                        buttonFetchUser.visibility = View.GONE
-//                        progressBar.visibility = View.VISIBLE
-//                    }
 
                     is MainState.Users -> {
-//                        progressBar.visibility = View.GONE
-//                        buttonFetchUser.visibility = View.GONE
                         renderList(it.user)
                     }
+
                     is MainState.Error -> {
-//                        progressBar.visibility = View.GONE
-//                        buttonFetchUser.visibility = View.VISIBLE
                         Toast.makeText(this@HomeActivity, it.error, Toast.LENGTH_LONG).show()
                     }
+
                 }
             }
         }

@@ -14,11 +14,11 @@ class MainAdapter(
 ) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(user: Job) {
-            itemView.textViewCompanyName.text = user.company
-            itemView.TextViewJobTitle.text = user.title
+        fun bind(job: Job) {
+            itemView.textViewCompanyName.text = job.company
+            itemView.TextViewJobTitle.text = job.title
             Glide.with(itemView.companyLogo.context)
-                .load(user.companyLogo)
+                .load(job.companyLogo)
                 .into(itemView.companyLogo)
         }
     }
