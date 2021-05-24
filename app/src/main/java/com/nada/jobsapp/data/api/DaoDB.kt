@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.nada.jobsapp.data.model.Job
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface DaoDB {
@@ -16,6 +17,6 @@ interface DaoDB {
     fun delete(job: Job)
 
     @Query("SELECT * FROM job")
-    fun getAll(): List<Job>
+    fun getAll(): Flow<List<Job>>
 
 }

@@ -21,6 +21,7 @@
         </activity>
 
         <activity android:name=".ui.main.HomeActivity" android:parentActivityName=".ui.main.MainActivity"/>
+        <activity android:name=".ui.main.FavoriteActivity"/>
 
     </application>
 
