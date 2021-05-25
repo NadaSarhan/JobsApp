@@ -9,9 +9,8 @@ import com.nada.jobsapp.R
 import com.nada.jobsapp.data.model.Job
 import kotlinx.android.synthetic.main.job_items.view.*
 
-class MainAdapter(
-    private val jobs: ArrayList<Job>
-) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
+class MainAdapter(private val jobs: ArrayList<Job>)
+    : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(job: Job) {
