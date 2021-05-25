@@ -1,5 +1,7 @@
 package com.nada.jobsapp.ui.main
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.nada.jobsapp.R
@@ -26,7 +28,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @ExperimentalCoroutinesApi
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(){
 
     private lateinit var mainViewModel: MainViewModel
     private var adapter = MainAdapter(arrayListOf())
@@ -98,6 +100,12 @@ class HomeActivity : AppCompatActivity() {
         recyclerViewHomeJobs.visibility = View.VISIBLE
         users.let { listOfUsers -> listOfUsers.let { adapter.addData(it) } }
         adapter.notifyDataSetChanged()
+    }
+
+    public fun onClick() {
+        Toast.makeText(this, "Item Clicked", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, FavoriteActivity::class.java)
+        startActivity(intent)
     }
 
 }
