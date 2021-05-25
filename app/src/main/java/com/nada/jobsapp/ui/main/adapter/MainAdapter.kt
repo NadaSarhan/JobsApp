@@ -29,10 +29,10 @@ class MainAdapter(private val jobs: ArrayList<Job>)
                 .load(job.companyLogo)
                 .into(itemView.companyLogo)
 
-            itemView.imgbtnFav.setOnClickListener(
-                View.OnClickListener {
-                }
-            )
+//            itemView.imgbtnFav.setOnClickListener(
+//                View.OnClickListener {
+//                }
+//            )
 
         }
     }
